@@ -1,0 +1,128 @@
+@import "../variables/variables";
+
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-row-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@mixin flex-row-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-row-evenly {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@mixin font-black {
+    font-family: $font;
+    color: $black;
+}
+
+@mixin font-white {
+    font-family: $font;
+    color: $white;
+}
+
+@mixin font-sec-black {
+    font-family: $font-sec;
+    color: $black;
+}
+
+@mixin font-sec-white {
+    font-family: $font-sec;
+    color: $white;
+}
+
+@mixin product-tittle--mobile-tablet {
+    font-size: 20px;
+    margin: 10% 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $black;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    font-family: $font;
+    color: $black;
+}
+
+@mixin product-tittle--desktop {
+    font-family: $font;
+    color: $black;
+    font-size: 20px;
+    margin: 3% 50px 20px 50px;
+    padding-bottom: 10px;
+    text-align: left;
+    border-bottom: 1px solid $black;
+}
+
+@mixin align-center {
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+@mixin circle-social-media {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: $black;
+    font-size: 25px;
+}
+
+@mixin circle-filter-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid $black;
+}
+
+@mixin btn {
+    text-decoration: none;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    appearance: none;
+    text-transform: uppercase;
+    background: none;
+    white-space: normal;
+    background-size: 200% 200%;
+    background-image: linear-gradient(to top, #040404 50%, transparent 50%);
+    color: #040404;
+    border-bottom: 2px solid #040404;
+    font-weight: bold;
+    transition: all 0.09s ease-in;
+    cursor: pointer;
+}
+
+@mixin btn_hover {
+    color: #FFFFFF;
+    background-image: linear-gradient(to top, #040404 51%, transparent 50%);
+    background-position: 0 100%;
+    outline: 0;
+    opacity: 0.8;
+}
