@@ -1,71 +1,293 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600&display=swap'); //font
 
 * {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+nav {
+  @include flex-col;
+  z-index: 30;
+}
+
+.header__account {
+  @include flex-row-center;
+  background-color: $black;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  z-index: 20;
+}
+
+.header__account--align {
+  margin: 4% 9% 4% 9%;
+}
+
+.header__account--btn {
+  @include font-white;
+}
+
+.nav__mobile {
+  @include flex-row-between;
+  background-color: $white;
+  border-bottom: 1px solid $black;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  z-index: 30;
+}
+
+.nav__btn__mobile--icon {
+  font-family: $font-icon;
+  font-size: 30px;
+  color: $black;
+  margin: 0 20px 0 20px;
+  cursor: pointer;
+}
+
+.nav__menu__mobile {
+  position: fixed;
+  width: 100%;
+  height: 0vh;
+  top: 100px;
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  transition: all .5s;
+}
+
+.nav__menu__mobile li {
+  display: none;
+  line-height: 30px;
+  margin: 10px 0;
+  transition: all .5s;
+}
+
+.nav__menu__mobile li a {
+  @include font-black;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nav__menu__mobile li a:hover {
+  color: $black-hover;
+  transition: .3s;
+}
+
+.nav__menu__mobile li a.active {
+  color: $violet;
+}
+
+#check__mobile {
+  display: none;
+}
+
+#check__mobile:checked~.nav__menu__mobile {
+  height: 100vh;
+}
+
+#check__mobile:checked~.nav__menu__mobile li {
+  display: block;
+}
+
+.nav__btn__mobile {
+  @include flex-row-end;
+}
+
+.nav__btn__search__mobile {
+  position: fixed;
+  width: 100%;
+  height: 0vh;
+  top: 100px;
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  transition: all .5s;
+  padding: 0%;
+}
+
+.nav__btn__search__mobile li {
+  display: none;
+  line-height: 30px;
+  margin: 10px 0;
+  transition: all .5s;
+}
+
+.nav__btn__search__mobile--input {
+  @include font-black;
+  font-size: 16px;
+  font-weight: 600;
+  width: 94%;
+  margin: 2% 2% 2% 3%;
+  display: block;
+  @include font-black;
+  font-size: 14px;
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  appearance: none;
+  background-color: white;
+  align-items: center;
+}
+
+.nav__btn__search__mobile--input:hover {
+  border: 1px solid rgb(0, 0, 0);
+  transition: 0.3s;
+}
+
+.nav__btn__search__mobile li p {
+  @include font-black;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+}
+
+#check__search__mobile {
+  display: none;
+}
+
+#check__search__mobile:checked~.nav__btn__search__mobile {
+  height: 70px;
+}
+
+#check__search__mobile:checked~.nav__btn__search__mobile li {
+  display: block;
+}
+
+.nav__btn__cart__mobile {
+  position: fixed;
+  width: 100%;
+  height: 0vh;
+  top: 100px;
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  transition: all .5s;
+}
+
+.nav__btn__cart__mobile li {
+  display: none;
+  line-height: 30px;
+  margin: 10px 0;
+  transition: all .5s;
+}
+
+.nav__btn__cart__mobile--input {
+  @include font-black;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.nav__btn__cart__mobile li p {
+  @include font-black;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+}
+
+#check__cart__mobile {
+  display: none;
+}
+
+#check__cart__mobile:checked~.nav__btn__cart__mobile {
+  height: 100vh;
+}
+
+#check__cart__mobile:checked~.nav__btn__cart__mobile li {
+  display: block;
+}
+
+.nav__desktop {
+  display: none;
+}
+
+@media screen and (min-width: 700px) and (max-width:1023px) {
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600&display=swap');
+
+  * {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-}
+  }
 
-li {
+  li {
     list-style: none;
-}
+  }
 
-a {
+  a {
     text-decoration: none;
-}
+  }
 
-header {
+  header {
     width: 100%;
-}
+  }
 
-img {
+  img {
     max-width: 100%;
-}
+  }
 
-nav {
+  nav {
     @include flex-col;
     z-index: 30;
-}
+  }
 
-.header__account {
-    @include flex-row-center;
+  .header__account {
     background-color: $black;
+    @include flex-row-center;
     width: 100%;
     height: 50px;
     position: fixed;
-    z-index: 20;
-}
+  }
 
-.header__account--align {
-    margin: 4% 9% 4% 9%;
-}
+  .header__account--align {
+    margin: 4% 18% 4% 18%;
+  }
 
-.header__account--btn {
+  .header__account--btn {
     @include font-white;
-}
+  }
 
-.nav__mobile {
+  .nav__mobile {
     @include flex-row-between;
     background-color: $white;
-    border-bottom: 1px solid $black;
     height: 50px;
     width: 100%;
     position: fixed;
     top: 50px;
-    z-index: 30;
-}
+  }
 
-.nav__btn__mobile--icon {
+  .nav__btn__mobile--icon {
     font-family: $font-icon;
     font-size: 30px;
     color: $black;
-    margin: 0 20px 0 20px;
+    margin: 0 50px 0 50px;
     cursor: pointer;
-}
+  }
 
-.nav__menu__mobile {
+  .no__margin {
+    margin: 0%;
+  }
+
+  .nav__menu__mobile {
     position: fixed;
     width: 100%;
     height: 0vh;
@@ -73,47 +295,44 @@ nav {
     background: rgba(255, 255, 255, 0.95);
     text-align: center;
     transition: all .5s;
-}
+  }
 
-.nav__menu__mobile li {
+  .nav__menu__mobile li {
     display: none;
     line-height: 30px;
     margin: 10px 0;
     transition: all .5s;
-}
+  }
 
-.nav__menu__mobile li a {
+  .nav__menu__mobile li a {
     @include font-black;
     font-size: 16px;
     font-weight: 600;
-}
+  }
 
-.nav__menu__mobile li a:hover {
-    color: $black-hover;
+  .nav__menu__mobile li a.active,
+  .nav__menu__mobile li a:hover {
+    color: rgba(0, 0, 0, 0.65);
     transition: .3s;
-}
+  }
 
-.nav__menu__mobile li a.active {
+  .nav__menu__mobile li a.active {
     color: $violet;
-}
+  }
 
-#check__mobile {
+  #check__mobile {
     display: none;
-}
+  }
 
-#check__mobile:checked~.nav__menu__mobile {
+  #check__mobile:checked~.nav__menu__mobile {
     height: 100vh;
-}
+  }
 
-#check__mobile:checked~.nav__menu__mobile li {
+  #check__mobile:checked~.nav__menu__mobile li {
     display: block;
-}
+  }
 
-.nav__btn__mobile {
-    @include flex-row-end;
-}
-
-.nav__btn__search__mobile {
+  .nav__btn__search__mobile {
     position: fixed;
     width: 100%;
     height: 0vh;
@@ -122,16 +341,16 @@ nav {
     text-align: center;
     transition: all .5s;
     padding: 0%;
-}
+  }
 
-.nav__btn__search__mobile li {
+  .nav__btn__search__mobile li {
     display: none;
     line-height: 30px;
     margin: 10px 0;
     transition: all .5s;
-}
+  }
 
-.nav__btn__search__mobile--input {
+  .nav__btn__search__mobile--input {
     @include font-black;
     font-size: 16px;
     font-weight: 600;
@@ -145,33 +364,33 @@ nav {
     appearance: none;
     background-color: white;
     align-items: center;
-}
+  }
 
-.nav__btn__search__mobile--input:hover {
+  .nav__btn__search__mobile--input:hover {
     border: 1px solid rgb(0, 0, 0);
     transition: 0.3s;
-}
+  }
 
-.nav__btn__search__mobile li p {
+  .nav__btn__search__mobile li p {
     @include font-black;
     font-size: 16px;
     font-weight: 600;
     width: 100%;
-}
+  }
 
-#check__search__mobile {
+  #check__search__mobile {
     display: none;
-}
+  }
 
-#check__search__mobile:checked~.nav__btn__search__mobile {
-    height: 70px;
-}
+  #check__search__mobile:checked~.nav__btn__search__mobile {
+    height: 15vh;
+  }
 
-#check__search__mobile:checked~.nav__btn__search__mobile li {
+  #check__search__mobile:checked~.nav__btn__search__mobile li {
     display: block;
-}
+  }
 
-.nav__btn__cart__mobile {
+  .nav__btn__cart__mobile {
     position: fixed;
     width: 100%;
     height: 0vh;
@@ -179,531 +398,318 @@ nav {
     background: rgba(255, 255, 255, 0.95);
     text-align: center;
     transition: all .5s;
-}
+  }
 
-.nav__btn__cart__mobile li {
+  .nav__btn__cart__mobile li {
     display: none;
     line-height: 30px;
     margin: 10px 0;
     transition: all .5s;
-}
+  }
 
-.nav__btn__cart__mobile--input {
+  .nav__btn__cart__mobile--input {
     @include font-black;
     font-size: 16px;
     font-weight: 600;
     width: 100%;
-}
+  }
 
-.nav__btn__cart__mobile li p {
+  .nav__btn__cart__mobile li p {
     @include font-black;
     font-size: 16px;
     font-weight: 600;
     width: 100%;
-}
+  }
 
-#check__cart__mobile {
+  #check__cart__mobile {
     display: none;
-}
+  }
 
-#check__cart__mobile:checked~.nav__btn__cart__mobile {
+  #check__cart__mobile:checked~.nav__btn__cart__mobile {
     height: 100vh;
-}
+  }
 
-#check__cart__mobile:checked~.nav__btn__cart__mobile li {
+  #check__cart__mobile:checked~.nav__btn__cart__mobile li {
     display: block;
-}
+  }
 
-.nav__desktop {
+  .nav__desktop {
     display: none;
-}
-
-@media screen and (min-width: 700px) and (max-width:1023px) {
-    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600&display=swap');
-
-    * {
-        margin: 0%;
-        padding: 0%;
-        box-sizing: border-box;
-        text-decoration: none;
-        list-style: none;
-    }
-
-    li {
-        list-style: none;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    header {
-        width: 100%;
-    }
-
-    img {
-        max-width: 100%;
-    }
-
-    nav {
-        @include flex-col;
-        z-index: 30;
-    }
-
-    .header__account {
-        background-color: $black;
-        @include flex-row-center;
-        width: 100%;
-        height: 50px;
-        position: fixed;
-    }
-
-    .header__account--align {
-        margin: 4% 18% 4% 18%;
-    }
-
-    .header__account--btn {
-        @include font-white;
-    }
-
-    .nav__mobile {
-        @include flex-row-between;
-        background-color: $white;
-        height: 50px;
-        width: 100%;
-        position: fixed;
-        top: 50px;
-    }
-
-    .nav__btn__mobile--icon {
-        font-family: $font-icon;
-        font-size: 30px;
-        color: $black;
-        margin: 0 50px 0 50px;
-        cursor: pointer;
-    }
-
-    .no__margin {
-        margin: 0%;
-    }
-
-    .nav__menu__mobile {
-        position: fixed;
-        width: 100%;
-        height: 0vh;
-        top: 100px;
-        background: rgba(255, 255, 255, 0.95);
-        text-align: center;
-        transition: all .5s;
-    }
-
-    .nav__menu__mobile li {
-        display: none;
-        line-height: 30px;
-        margin: 10px 0;
-        transition: all .5s;
-    }
-
-    .nav__menu__mobile li a {
-        @include font-black;
-        font-size: 16px;
-        font-weight: 600;
-    }
-
-    .nav__menu__mobile li a.active,
-    .nav__menu__mobile li a:hover {
-        color: rgba(0, 0, 0, 0.65);
-        transition: .3s;
-    }
-
-    .nav__menu__mobile li a.active {
-        color: $violet;
-    }
-
-    #check__mobile {
-        display: none;
-    }
-
-    #check__mobile:checked~.nav__menu__mobile {
-        height: 100vh;
-    }
-
-    #check__mobile:checked~.nav__menu__mobile li {
-        display: block;
-    }
-
-    .nav__btn__search__mobile {
-        position: fixed;
-        width: 100%;
-        height: 0vh;
-        top: 100px;
-        background: rgba(255, 255, 255, 0.95);
-        text-align: center;
-        transition: all .5s;
-        padding: 0%;
-    }
-
-    .nav__btn__search__mobile li {
-        display: none;
-        line-height: 30px;
-        margin: 10px 0;
-        transition: all .5s;
-    }
-
-    .nav__btn__search__mobile--input {
-        @include font-black;
-        font-size: 16px;
-        font-weight: 600;
-        width: 94%;
-        margin: 2% 2% 2% 3%;
-        display: block;
-        @include font-black;
-        font-size: 14px;
-        padding: 12px;
-        border: 1px solid rgba(0, 0, 0, 0.14);
-        appearance: none;
-        background-color: white;
-        align-items: center;
-    }
-
-    .nav__btn__search__mobile--input:hover {
-        border: 1px solid rgb(0, 0, 0);
-        transition: 0.3s;
-    }
-
-    .nav__btn__search__mobile li p {
-        @include font-black;
-        font-size: 16px;
-        font-weight: 600;
-        width: 100%;
-    }
-
-    #check__search__mobile {
-        display: none;
-    }
-
-    #check__search__mobile:checked~.nav__btn__search__mobile {
-        height: 15vh;
-    }
-
-    #check__search__mobile:checked~.nav__btn__search__mobile li {
-        display: block;
-    }
-
-    .nav__btn__cart__mobile {
-        position: fixed;
-        width: 100%;
-        height: 0vh;
-        top: 100px;
-        background: rgba(255, 255, 255, 0.95);
-        text-align: center;
-        transition: all .5s;
-    }
-
-    .nav__btn__cart__mobile li {
-        display: none;
-        line-height: 30px;
-        margin: 10px 0;
-        transition: all .5s;
-    }
-
-    .nav__btn__cart__mobile--input {
-        @include font-black;
-        font-size: 16px;
-        font-weight: 600;
-        width: 100%;
-    }
-
-    .nav__btn__cart__mobile li p {
-        @include font-black;
-        font-size: 16px;
-        font-weight: 600;
-        width: 100%;
-    }
-
-    #check__cart__mobile {
-        display: none;
-    }
-
-    #check__cart__mobile:checked~.nav__btn__cart__mobile {
-        height: 100vh;
-    }
-
-    #check__cart__mobile:checked~.nav__btn__cart__mobile li {
-        display: block;
-    }
-
-    .nav__desktop {
-        display: none;
-    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600&display=swap');
 
-    * {
-        margin: 0%;
-        padding: 0%;
-        box-sizing: border-box;
-        text-decoration: none;
-        list-style: none;
-    }
+  * {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
 
-    li {
-        list-style: none;
-    }
+  li {
+    list-style: none;
+  }
 
-    a {
-        text-decoration: none;
-    }
+  a {
+    text-decoration: none;
+  }
 
-    header {
-        width: 100%;
-    }
+  header {
+    width: 100%;
+  }
 
-    img {
-        max-width: 100%;
-    }
+  img {
+    max-width: 100%;
+  }
 
-    .header__account {
-        background-color: $black;
-        @include flex-row-end;
-        position: fixed;
-        width: 100%;
-        height: 5vh;
-        z-index: 30;
-    }
+  .header__account {
+    background-color: $black;
+    @include flex-row-end;
+    position: fixed;
+    width: 100%;
+    height: 5vh;
+    z-index: 30;
+  }
 
-    .header__account--align {
-        margin: 3% 5% 3% 0%;
-        @include flex-row-end;
-    }
+  .header__account--align {
+    margin: 3% 5% 3% 0%;
+    @include flex-row-end;
+  }
 
-    .header__account--btn {
-        font-family: $font;
-        color: rgb(213, 213, 213);
-        font-size: 14px;
-    }
+  .header__account--btn {
+    font-family: $font;
+    color: rgb(213, 213, 213);
+    font-size: 14px;
+  }
 
-    .header__account--btn:hover {
-        color: $white;
-        transition: 0.2s;
-    }
+  .header__account--btn:hover {
+    color: $white;
+    transition: 0.2s;
+  }
 
-    .nav__mobile {
-        display: none;
-    }
+  .nav__mobile {
+    display: none;
+  }
 
-    .nav__desktop {
-        display: flex;
-        background-color: $white;
-        border-bottom: 0.5px solid $black;
-        width: 100%;
-        height: 15vh;
-        z-index: 20;
-        padding-top: 5vh;
-        position: fixed;
-    }
+  .nav__desktop {
+    display: flex;
+    background-color: $white;
+    border-bottom: 0.5px solid $black;
+    width: 100%;
+    height: 15vh;
+    z-index: 20;
+    padding-top: 5vh;
+    position: fixed;
+  }
 
-    .nav__desktop--logo {
-        width: 90px;
-        height: auto;
-        justify-content: left;
-        margin: 0.5% 8% 0% 5%;
-        background-color: #ffffff;
-    }
+  .nav__desktop--logo {
+    width: 90px;
+    height: auto;
+    justify-content: left;
+    margin: 0.5% 8% 0% 5%;
+    background-color: #ffffff;
+  }
 
-    .nav__desktop__btn {
-        width: 100%;
-        @include flex-row-center;
-        margin-right: 1%;
-    }
+  .nav__desktop__btn {
+    width: 100%;
+    @include flex-row-center;
+    margin-right: 1%;
+  }
 
-    .nav__desktop__btn--text {
-        font-family: $font;
-        font-size: 16px;
-        font-weight: 600;
-        color: $black;
-        cursor: pointer;
-    }
+  .nav__desktop__btn--text {
+    font-family: $font;
+    font-size: 16px;
+    font-weight: 600;
+    color: $black;
+    cursor: pointer;
+  }
 
-    .nav__desktop__btn--text:hover {
-        color: $grey;
-        transition: 0.2s;
-    }
+  .nav__desktop__btn--text:hover {
+    color: $grey;
+    transition: 0.2s;
+  }
 
-    .nav__desktop__menu {
-        position: fixed;
-        height: 0vh;
-        top: 12vh;
-        background-color: $white;
-        transition: all 0.4s;
-    }
+  .nav__desktop__menu {
+    position: fixed;
+    height: 0vh;
+    top: 12vh;
+    background-color: $white;
+    transition: all 0.4s;
+  }
 
-    .nav__desktop__menu--text {
-        padding-left: 20px;
-        line-height: 30px;
-    }
+  .nav__desktop__menu--text {
+    padding-left: 20px;
+    line-height: 30px;
+  }
 
-    .nav__desktop__btn--align {
-        margin: 0% 7% 0% 7%;
-    }
+  .nav__desktop__btn--align {
+    margin: 0% 7% 0% 7%;
+  }
 
-    .nav__desktop__btn--pointer {
-        cursor: pointer;
-    }
+  .nav__desktop__btn--pointer {
+    cursor: pointer;
+  }
 
-    .nav__desktop__menu li {
-        display: none;
-        margin: 20px 0;
-        transition: all 0.3s;
-        width: 28vw;
-    }
+  .nav__desktop__menu li {
+    display: none;
+    margin: 20px 0;
+    transition: all 0.3s;
+    width: 28vw;
+  }
 
-    .nav__desktop__menu li a {
-        @include font-black;
-    }
+  .nav__desktop__menu li a {
+    @include font-black;
+  }
 
-    .nav__desktop__menu li a:hover {
-        color: $black-hover;
-        transition: .3s;
-    }
+  .nav__desktop__menu li a:hover {
+    color: $black-hover;
+    transition: .3s;
+  }
 
-    .nav__desktop__menu li a.active {
-        color: $violet
-    }
+  .nav__desktop__menu li a.active {
+    color: $violet
+  }
 
-    #check__desktop {
-        display: none;
-    }
+  #check__desktop {
+    display: none;
+  }
 
-    #check__desktop:checked~.nav__desktop__menu {
-        height: 100vh;
-    }
+  #check__desktop:checked~.nav__desktop__menu {
+    height: 100vh;
+  }
 
-    #check__desktop:checked~.nav__desktop__menu li {
-        display: block;
-    }
+  #check__desktop:checked~.nav__desktop__menu li {
+    display: block;
+  }
 
-    .nav__btn__desktop {
-        @include flex-row-center;
-        margin-right: 4%;
-    }
+  .nav__btn__desktop {
+    @include flex-row-center;
+    margin-right: 4%;
+  }
 
-    .nav__btn__desktop--icon {
-        font-family: $font-icon;
-        color: $black;
-        margin-right: 60px;
-        font-size: 25px;
-        cursor: pointer;
-        z-index: 10;
-    }
+  .nav__btn__desktop--icon {
+    font-family: $font-icon;
+    color: $black;
+    margin-right: 60px;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 10;
+  }
 
-    .no__margin {
-        margin-right: 40px;
-    }
+  .no__margin {
+    margin-right: 40px;
+  }
 
-    .nav__btn__search__desktop {
-        position: fixed;
-        width: 50%;
-        height: 0vh;
-        top: 14vh;
-        background: rgba(255, 255, 255, 0.95);
-        text-align: center;
-        transition: all .5s;
-        padding: 0%;
-        z-index: 5;
-    }
+  .nav__btn__search__desktop {
+    position: fixed;
+    width: 50%;
+    height: 0vh;
+    top: 14vh;
+    background: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    transition: all .5s;
+    padding: 0%;
+    z-index: 5;
+  }
 
-    .nav__btn__search__desktop li {
-        display: none;
-        line-height: 30px;
-        margin: 10px 0;
-        transition: all .5s;
-    }
+  .nav__btn__search__desktop li {
+    display: none;
+    line-height: 30px;
+    margin: 10px 0;
+    transition: all .5s;
+  }
 
-    .nav__btn__search__desktop--input {
-        @include font-black;
-        font-size: 16px;
-        font-weight: 600;
-        width: 62%;
-        height: 7vh;
-        margin: 3% 2% 2% 3%;
-        display: block;
-        @include font-black;
-        font-size: 14px;
-        padding: 12px;
-        border: 1px solid rgba(0, 0, 0, 0.14);
-        appearance: none;
-        background-color: white;
-        align-items: center;
-    }
+  .nav__btn__search__desktop--input {
+    @include font-black;
+    font-size: 16px;
+    font-weight: 600;
+    width: 62%;
+    height: 7vh;
+    margin: 3% 2% 2% 3%;
+    display: block;
+    @include font-black;
+    font-size: 14px;
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    appearance: none;
+    background-color: white;
+    align-items: center;
+  }
 
-    .nav__btn__search__desktop--input:hover {
-        border: 1px solid rgb(0, 0, 0);
-        transition: 0.3s;
-    }
+  .nav__btn__search__desktop--input:hover {
+    border: 1px solid rgb(0, 0, 0);
+    transition: 0.3s;
+  }
 
-    .nav__btn__search__desktop li p {
-        @include font-black;
-        font-size: 16px;
-        font-weight: 600;
-        width: 100%;
-    }
+  .nav__btn__search__desktop li p {
+    @include font-black;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+  }
 
-    #check__search__desktop {
-        display: none;
-    }
+  #check__search__desktop {
+    display: none;
+  }
 
-    #check__search__desktop:checked~.nav__btn__search__desktop {
-        height: 13vh;
-    }
+  #check__search__desktop:checked~.nav__btn__search__desktop {
+    height: 13vh;
+  }
 
-    #check__search__desktop:checked~.nav__btn__search__desktop li {
-        display: block;
-    }
+  #check__search__desktop:checked~.nav__btn__search__desktop li {
+    display: block;
+  }
 
-    .nav__btn__cart__desktop {
-        position: fixed;
-        width: 30%;
-        height: 0vh;
-        margin-right: 7%;
-        top: 14vh;
-        background: rgba(255, 255, 255, 0.95);
-        text-align: center;
-        transition: all .5s;
-    }
+  .nav__btn__cart__desktop {
+    position: fixed;
+    width: 30%;
+    height: 0vh;
+    margin-right: 7%;
+    top: 14vh;
+    background: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    transition: all .5s;
+  }
 
-    .nav__btn__cart__desktop li {
-        display: none;
-        line-height: 30px;
-        margin: 10px 0;
-        transition: all .5s;
-    }
+  .nav__btn__cart__desktop li {
+    display: none;
+    line-height: 30px;
+    margin: 10px 0;
+    transition: all .5s;
+  }
 
-    .nav__btn__cart__desktop--input {
-        @include font-black;
-        font-size: 16px;
-        font-weight: 600;
-        width: 100%;
-    }
+  .nav__btn__cart__desktop--input {
+    @include font-black;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+  }
 
-    .nav__btn__cart__desktop li p {
-        @include font-black;
-        font-size: 16px;
-        font-weight: 600;
-        width: 100%;
-    }
+  .nav__btn__cart__desktop li p {
+    @include font-black;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+  }
 
-    #check__cart__desktop {
-        display: none;
-    }
+  #check__cart__desktop {
+    display: none;
+  }
 
-    #check__cart__desktop:checked~.nav__btn__cart__desktop {
-        height: 100vh;
-    }
+  #check__cart__desktop:checked~.nav__btn__cart__desktop {
+    height: 100vh;
+  }
 
-    #check__cart__desktop:checked~.nav__btn__cart__desktop li {
-        display: block;
-    }
+  #check__cart__desktop:checked~.nav__btn__cart__desktop li {
+    display: block;
+  }
+
+  .test {
+    @include font-sec-black;
+    @include align-center;
+    padding-top: 100px;
+  }
 }

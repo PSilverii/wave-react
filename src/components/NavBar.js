@@ -1,8 +1,12 @@
 //fotos
-import logoXs from "../app/assets/logo/logo-xs.png"
+import logoXs from "../app/assets/logo/logo-xs.png";
+//cart
+import CartWidgetMobileTablet from "./CartWidgetMobileTablet";
+import CartWidgetDesktop from "./CartWidgetDesktop";
+
 
 const NavBar = () => {
-    return (
+    return (<>
         <header>
             <nav>
                 <ul className="header__account">
@@ -60,15 +64,7 @@ const NavBar = () => {
                                 <input className="nav__btn__search__mobile--input" type="text" placeholder="Buscar" />
                             </li>
                         </ul>
-                        <label for="check__cart__mobile">
-                            <p className="nav__btn__mobile--icon">shopping_cart</p>
-                        </label>
-                        <input type="checkbox" id="check__cart__mobile" />
-                        <ul className="nav__btn__cart__mobile">
-                            <li>
-                                <p>Aún no tienes nada en tu carrito</p>
-                            </li>
-                        </ul>
+                        <CartWidgetMobileTablet />
                     </div>
                 </section>
                 <section className="nav__desktop">
@@ -121,20 +117,13 @@ const NavBar = () => {
                                 <input className="nav__btn__search__desktop--input" type="text" placeholder="Buscar" />
                             </li>
                         </ul>
-                        <label for="check__cart__desktop">
-                            <p className="nav__btn__desktop--icon">shopping_cart</p>
-                        </label>
-                        <input type="checkbox" id="check__cart__desktop" />
-                        <ul className="nav__btn__cart__desktop">
-                            <li>
-                                <p>Aún no tienes nada en tu carrito</p>
-                            </li>
-                        </ul>
+                        <CartWidgetDesktop />
                     </div>
                 </section>
             </nav>
         </header>
+    </>
     )
 }
 
-export default NavBar;
+export default NavBar
