@@ -16,7 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-css": "node-sass --include-path scss src/app/scss/App.scss src/app/css/App.css",
+    "build-css": "node-sass --include-path scss src/sass/scss/App.scss src/sass/css/App.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "eslintConfig": {

@@ -1,11 +1,22 @@
+import ProductTittle from "./ProductTittle";
+import ItemCount from "./ItemCount";
 
 
 
-const ItemListContainer = () => {
+const ItemListContainer = ({ product }) => {
+  const onAdd = (quantity) => {
+    console.log(`Compraste ${quantity}`)
+  }
+
+  const stock = 10;
+
+  let initialStock = () => (stock <= 0) ? initialStock = 0 : initialStock = 1;
+
   return (<>
-    <h1 className="test">Contenedor de Items</h1>
+    <ProductTittle greeting={product} className="test" />
+    <ItemCount initial={initialStock} stock={stock} onAdd={onAdd} />
   </>
   )
 }
 
-export default ItemListContainer
+export default ItemListContainer;

@@ -3,7 +3,7 @@
 
 const CartWidgetMobileTablet = () => {
   return (<>
-    <label for="check__cart__mobile">
+    <label htmlFor="check__cart__mobile">
       <p className="nav__btn__mobile--icon">shopping_cart</p>
     </label>
     <input type="checkbox" id="check__cart__mobile" />

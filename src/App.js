@@ -1,5 +1,5 @@
 //styles
-import "./app/scss/App.scss";
+import "./sass/css/App.css";
 //components
 import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer"

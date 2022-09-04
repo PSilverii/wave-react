@@ -1,0 +1,21 @@
+.test {
+	@include font-sec-black;
+	@include align-center;
+	padding-top: 100px;
+}
+
+@media screen and (min-width: 700px) and (max-width:1023px) {
+	.test {
+		@include font-sec-black;
+		@include align-center;
+		padding-top: 100px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.test {
+		@include font-sec-black;
+		@include align-center;
+		padding-top: 100px;
+	}
+}

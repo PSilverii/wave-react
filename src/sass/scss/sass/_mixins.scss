@@ -102,11 +102,9 @@
 }
 
 @mixin btn {
-  text-decoration: none;
   text-align: center;
   border: 0;
   cursor: pointer;
-  appearance: none;
   text-transform: uppercase;
   background: none;
   white-space: normal;
@@ -116,13 +114,33 @@
   border-bottom: 2px solid #040404;
   font-weight: bold;
   transition: all 0.09s ease-in;
-  cursor: pointer;
 }
 
-@mixin btn_hover {
+@mixin btn-hover {
   color: #FFFFFF;
   background-image: linear-gradient(to top, #040404 51%, transparent 50%);
   background-position: 0 100%;
   outline: 0;
   opacity: 0.8;
+}
+
+@mixin btn-disabled{
+  text-align: center;
+  border: 0;
+  text-transform: uppercase;
+  background: none;
+  white-space: normal;
+  background-size: 200% 200%;
+  color: #04040465;
+  border-bottom: 2px solid #0404047e;
+  font-weight: bold;
+  opacity: 1;
+}
+
+@mixin btn-count {
+  text-decoration: none;
+  border: 0;
+  text-align: center;
+  background: none;
+  cursor: pointer;
 }

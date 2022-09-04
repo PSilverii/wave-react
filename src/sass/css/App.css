@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600&display=swap");
 * {
   margin: 0%;
   padding: 0%;
@@ -556,7 +554,17 @@ nav {
   #check__cart__desktop:checked ~ .nav__btn__cart__desktop {
     height: 100vh; }
   #check__cart__desktop:checked ~ .nav__btn__cart__desktop li {
-    display: block; }
+    display: block; } }
+
+.test {
+  font-family: "Bebas Neue";
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  list-style: none;
+  padding-top: 100px; }
+
+@media screen and (min-width: 700px) and (max-width: 1023px) {
   .test {
     font-family: "Bebas Neue";
     color: #000000;
@@ -564,3 +572,81 @@ nav {
     text-decoration: none;
     list-style: none;
     padding-top: 100px; } }
+
+@media screen and (min-width: 1024px) {
+  .test {
+    font-family: "Bebas Neue";
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    padding-top: 100px; } }
+
+.item__count {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.item__count--between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  width: 30vw; }
+
+.item__count--btn {
+  text-decoration: none;
+  border: 0;
+  text-align: center;
+  background: none;
+  cursor: pointer;
+  font-family: "Raleway";
+  color: #000000;
+  font-size: 40px;
+  padding: 0 5px; }
+
+.item__count--number {
+  font-family: "Bebas Neue";
+  color: #000000;
+  font-size: 20px; }
+
+.btn {
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: none;
+  white-space: normal;
+  background-size: 200% 200%;
+  background-image: linear-gradient(to top, #040404 50%, transparent 50%);
+  color: #040404;
+  border-bottom: 2px solid #040404;
+  font-weight: bold;
+  transition: all 0.09s ease-in;
+  display: block;
+  padding: 15px 20px 15px 20px;
+  margin: 15px auto 0px auto;
+  justify-content: center; }
+
+.btn:hover {
+  color: #FFFFFF;
+  background-image: linear-gradient(to top, #040404 51%, transparent 50%);
+  background-position: 0 100%;
+  outline: 0;
+  opacity: 0.8; }
+
+.btn:disabled,
+.btn[disabled] {
+  text-align: center;
+  border: 0;
+  text-transform: uppercase;
+  background: none;
+  white-space: normal;
+  background-size: 200% 200%;
+  color: #04040465;
+  border-bottom: 2px solid #0404047e;
+  font-weight: bold;
+  opacity: 1; }

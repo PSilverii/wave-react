@@ -1,0 +1,44 @@
+.item__count {
+  @include flex-row-center;
+
+}
+
+.item__count--between {
+  @include flex-row-between;
+  padding: 0 10px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  width: 30vw;
+}
+
+.item__count--btn {
+  @include btn-count;
+  @include font-black;
+  font-size: 40px;
+  padding: 0 5px;
+}
+
+.item__count--number {
+  @include font-sec-black;
+  font-size: 20px;
+}
+
+.btn {
+  @include btn;
+  display: block;
+  padding: 15px 20px 15px 20px;
+  margin: 15px auto 0px auto;
+  justify-content: center;
+}
+
+.btn:hover{
+  @include btn-hover;
+}
+
+.btn:disabled,
+.btn[disabled]{
+  @include btn-disabled;
+}
+
+@media screen and (min-width: 700px) and (max-width:1023px) {}
+
+@media screen and (min-width: 1024px) {}

@@ -3,7 +3,7 @@
 
 const CartWidgetDesktop = () => {
   return (<>
-    <label for="check__cart__desktop">
+    <label htmlFor="check__cart__desktop">
       <p className="nav__btn__desktop--icon">shopping_cart</p>
     </label>
     <input type="checkbox" id="check__cart__desktop" />

@@ -219,7 +219,6 @@ nav {
 }
 
 @media screen and (min-width: 700px) and (max-width:1023px) {
-  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600&display=swap');
 
   * {
     margin: 0%;
@@ -439,7 +438,6 @@ nav {
 }
 
 @media screen and (min-width: 1024px) {
-  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600&display=swap');
 
   * {
     margin: 0%;
@@ -705,11 +703,5 @@ nav {
 
   #check__cart__desktop:checked~.nav__btn__cart__desktop li {
     display: block;
-  }
-
-  .test {
-    @include font-sec-black;
-    @include align-center;
-    padding-top: 100px;
   }
 }
