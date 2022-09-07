@@ -1,10 +1,11 @@
 //styles
-import "./sass/css/App.css";
+import "./app/css/App.css";
 //components
 import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer"
 
-function App() {
+
+const App = () => {
   return (<>
     <NavBar />
     <ItemListContainer />
