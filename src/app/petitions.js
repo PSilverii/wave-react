@@ -20,4 +20,4 @@ const getData = () => {
   return retProducts;
 }
 
-export default getData
+export default getData;

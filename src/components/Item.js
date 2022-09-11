@@ -1,14 +1,14 @@
 
-const Item = ({ info }) => {
+const Item = ({ products }) => {
   return (
     <>
       <a href="#">
         <div className="item__img">
-          <img src={info.image} alt="" />
+          <img src={products.image} alt="" />
         </div>
         <div className="item__text">
-          <p>{info.tittle}</p>
-          <p>{info.price}</p>
+          <p>{products.tittle}</p>
+          <p>{products.price}</p>
         </div>
       </a>
     </>

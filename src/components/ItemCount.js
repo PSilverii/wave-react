@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 
 
-const ItemCount = ({ initial, stock, onAdd }) => {
-  const [count, setCount] = useState(initial);
+const ItemCount = ({ initialStock, stock, onAdd }) => {
+  const [count, setCount] = useState(initialStock);
 
   useEffect(() => {
-    setCount(initial);
-  }, [initial])
+    setCount(initialStock);
+  }, [initialStock])
 
   return (<>
     <div className="item__count">
