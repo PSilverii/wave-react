@@ -1,6 +1,6 @@
 
 
-
+//ESTRUCTURA html CON LOS DATOS details
 const ItemDetails = ({details}) => {
   return (
     <div>
