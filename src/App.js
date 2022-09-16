@@ -1,18 +1,8 @@
-//styles
 import "./app/css/App.css";
-//components
-import NavBar from "./components/NavBar";
-import ItemListContainer from "./components/ItemListContainer"
-import ItemDetailsContainer from "./components/ItemDetailsContainer";
+import Router from "./app/Router";
 
-
-const App = () => {
-  return (<>
-    <NavBar />
-    <ItemListContainer />
-    <ItemDetailsContainer />
-  </>
-  );
-}
+const App = () => (
+        <Router />
+);
 
 export default App;

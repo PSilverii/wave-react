@@ -3,6 +3,7 @@ import logoXs from "../assets/logo/logo-xs.png";
 //cart
 import CartWidgetMobileTablet from "./CartWidgetMobileTablet";
 import CartWidgetDesktop from "./CartWidgetDesktop";
+import { NavLink } from "react-router-dom";
 
 
 const NavBar = () => {
@@ -11,10 +12,10 @@ const NavBar = () => {
             <nav>
                 <ul className="header__account">
                     <li className="header__account--align">
-                        <a className="header__account--btn" href="#">Crear Cuenta</a>
+                        <NavLink className="header__account--btn" to='#'>Crear Cuenta</NavLink>
                     </li>
                     <li className="header__account--align">
-                        <a className="header__account--btn" href="#">Iniciar Sesión</a>
+                        <NavLink className="header__account--btn" to='#'>Iniciar Sesión</NavLink>
                     </li>
                 </ul>
                 <section className="nav__mobile">
@@ -24,34 +25,34 @@ const NavBar = () => {
                     <input type="checkbox" id="check__mobile" />
                     <ul className="nav__menu__mobile">
                         <li>
-                            <a className="active" href="#">Inicio</a>
+                            <NavLink className="active" to='/'>Inicio</NavLink>
                         </li>
                         <li>
-                            <a href="#">Pantalones</a>
+                            <NavLink to='/category/pantalones'>Pantalones</NavLink>
                         </li>
                         <li>
-                            <a href="#">Remeras</a>
+                            <NavLink to='/category/remeras'>Remeras</NavLink>
                         </li>
                         <li>
-                            <a href="#">Buzos</a>
+                            <NavLink to='/category/buzos'>Buzos</NavLink>
                         </li>
                         <li>
-                            <a href="#">Zapatillas</a>
+                            <NavLink to='/category/zapatillas'>Zapatillas</NavLink>
                         </li>
                         <li>
-                            <a href="#">Neoprene</a>
+                            <NavLink to='/category/neoprene'>Neoprene</NavLink>
                         </li>
                         <li>
-                            <a href="#">Botas Neoprene</a>
+                            <NavLink to='/category/botasneoprene'>Botas Neoprene</NavLink>
                         </li>
                         <li>
-                            <a href="#">Lycras</a>
+                            <NavLink to='/category/lycras'>Lycras</NavLink>
                         </li>
                         <li>
-                            <a href="#">Fundas para tablas de Surf</a>
+                            <NavLink to='/category/fundas'>Fundas para tablas de Surf</NavLink>
                         </li>
                         <li>
-                            <a href="#">Contactanos</a>
+                            <NavLink to='/contact'>Contactanos</NavLink>
                         </li>
                     </ul>
                     <div className="nav__btn__mobile">
@@ -73,39 +74,39 @@ const NavBar = () => {
                     </picture>
                     <ul className="nav__desktop__btn">
                         <li className="nav__desktop__btn--align">
-                            <a className="nav__desktop__btn--text" href="#">Home</a>
+                            <NavLink className="nav__desktop__btn--text" to='/'>Home</NavLink>
                         </li>
                         <li className="nav__desktop__btn--text nav__desktop__btn--align">
                             <label className="nav__desktop__btn--pointer" htmlFor="check__desktop">Tienda Online</label>
                             <input type="checkbox" id="check__desktop" />
                             <ul className="nav__desktop__menu">
                                 <li>
-                                    <a className="nav__desktop__menu--text" href="#">Pantalones</a>
+                                    <NavLink className="nav__desktop__menu--text" to='/category/pantalones'>Pantalones</NavLink>
                                 </li>
                                 <li>
-                                    <a className="nav__desktop__menu--text" href="#">Remeras</a>
+                                    <NavLink className="nav__desktop__menu--text" to='/category/remeras'>Remeras</NavLink>
                                 </li>
                                 <li>
-                                    <a className="nav__desktop__menu--text" href="#">Buzos</a>
+                                    <NavLink className="nav__desktop__menu--text" to='/category/buzos'>Buzos</NavLink>
                                 </li>
                                 <li>
-                                    <a className="nav__desktop__menu--text" href="#">Zapatillas</a>
+                                    <NavLink className="nav__desktop__menu--text" to='/category/zapatillas'>Zapatillas</NavLink>
                                 </li>
                                 <li>
-                                    <a className="nav__desktop__menu--text" href="#">Neoprene</a>
+                                    <NavLink className="nav__desktop__menu--text" to='/category/neoprene'>Neoprene</NavLink>
                                 </li>
                                 <li>
-                                    <a className="nav__desktop__menu--text" href="#">Botas Neoprene</a>
+                                    <NavLink className="nav__desktop__menu--text" to='/category/botasneoprene'>Botas Neoprene</NavLink>
                                 </li>
                                 <li>
-                                    <a className="nav__desktop__menu--text" href="#">Lycras</a>
+                                    <NavLink className="nav__desktop__menu--text" to='/category/lycras'>Lycras</NavLink>
                                 </li>
                                 <li>
-                                    <a className="nav__desktop__menu--text" href="#">Fundas para tablas de Surf</a>
+                                    <NavLink className="nav__desktop__menu--text" to='/category/fundas'>Fundas para tablas de Surf</NavLink>
                                 </li>
                             </ul>
                         </li>
-                        <li className="nav__desktop__btn--align"><a className="nav__desktop__btn--text" href="#">Contactanos</a></li>
+                        <li className="nav__desktop__btn--align"><NavLink className="nav__desktop__btn--text" to='/contact'>Contactanos</NavLink></li>
                     </ul>
                     <div className="nav__btn__desktop">
                         <label htmlFor="check__search__desktop">

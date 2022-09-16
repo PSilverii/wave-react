@@ -10,6 +10,7 @@ const ItemDetails = ({details}) => {
       <h1>{details.tittle}</h1>
       <p>{details.cuotas}</p>
       <p>{details.price}</p>
+      <p>{details.plazoDevolucion}</p>
     </div>
   )
 }
