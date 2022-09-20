@@ -83,4 +83,4 @@ const Router = () => {
 ```
 
 # GIF 
-![]
+![](https://github.com/PSilverii/wave-react/blob/master/readme__img/gif_router.gif)
