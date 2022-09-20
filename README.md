@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Wave | Fake E-Commers | Patricio Silverii
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Wave es una tienda de ropa falsa desarrollada con ReactJS.
+En este proyecto elegí implementar SASS por la funcionalidad que permiten los mixins y las variables para definir los estilos del sitio.
 
-## Available Scripts
+# Pre-entrega del proyecto final
 
-In the project directory, you can run:
+La consigna de esta entrega es configurar la navegabilidad de la app.
+La ruta de mi componente Router es '/src/app/Router.js'
+En este proyecto existen dos componentes llamados Home.js y Categories.js, que se encuentran en '/src/views/...', cuya funcionalidad es contener otros componentes para crear vistas diferentes en el sitio.
+```javascript
+const Home = () => {
+  return (
+    <>
+    <FirstViewIndex />
+    <FeaturedProducts />
+    <Banner />
+    </>
+  )
+}
+```
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```javascript
+const Categories = () => {
+  return (
+    <>
+      <ViewsHeader />
+      <section className="categories">
+        <FilterDesktop />
+        <ItemListContainer />
+      </section>
+    </>
+  )
+}
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Además añadí otro componente global que se encuentra en '/src/app/Layout.js' que renderiza los componentes globales del sitio
+```javascript
+const Layout = () => {
+  return (<>
+    <NavBar />
+    <main>
+      <Outlet />
+    </main>
+    < Footer />
+  </>
+  )
+}
+```
 
-### `npm test`
+Por lo que no cumplo extrictamente con lo solicitado, explico por un lado la consigna, y por otro las modificaciónes que hice en este proyecto.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Rutas a configurar
 
-### `npm run build`
+-Consigna
+'/' navega a <ItemListContainer />
+'/category/:id' <ItemListContainer />
+'/item/:id' navega a <ItemDetailContainer />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-Modificaciónes en este proyecto
+'/' navega a <Home /> en '/src/views/Home.js'
+'/category/:id' navega a <Categories /> en '/src/views/Categories.js'
+''/item/:id' navega a <ItemDetailContainer /> /* No hice cambios respecto a la consigna */
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Entonces mi componente Router queda de la siguiente manera
+```javascript
+const Router = () => {
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/category/:categoryId" element={<Categories />} />
+            <Route path="/details/:detailsId" element={<ItemDetailContainer />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
+}
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# GIF 
+![]
