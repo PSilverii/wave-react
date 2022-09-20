@@ -54,14 +54,18 @@ Por lo que no cumplo extrictamente con lo solicitado, explico por un lado la con
 ### Rutas a configurar
 
 -Consigna
+```
 '/' navega a <ItemListContainer />
 '/category/:id' <ItemListContainer />
 '/item/:id' navega a <ItemDetailContainer />
+```
 
 -Modificaciónes en este proyecto
+```
 '/' navega a <Home /> en '/src/views/Home.js'
 '/category/:id' navega a <Categories /> en '/src/views/Categories.js'
 ''/item/:id' navega a <ItemDetailContainer /> /* No hice cambios respecto a la consigna */
+```
 
 Entonces mi componente Router queda de la siguiente manera
 ```javascript
@@ -83,4 +87,4 @@ const Router = () => {
 ```
 
 # GIF 
-![]
+![](https://github.com/PSilverii/wave-react/blob/master/readme__img/gif_router.gif)
