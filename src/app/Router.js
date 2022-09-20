@@ -17,6 +17,7 @@ const Router = () => {
             <Route index element={<Home />} />
             <Route path="/category/:categoryId" element={<Categories />} />
             <Route path="/details/:detailsId" element={<ItemDetailContainer />} />
+            {/*SINCRONIZAR COUNTER - agrego ruta /cart para el componente Cart */}
             <Route path="/cart" element={<Cart />} />
           </Route>
         </Routes>

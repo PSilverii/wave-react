@@ -4,14 +4,8 @@ import ItemCount from "./ItemCount";
 
 
 const ItemDetails = ({ details }) => {
-  const finish = () => {
-    finishBuy
-      ? <Link to='/cart' className="btn">Finalizar Compra</Link>
-      : <ItemCount initialStock={0} stock={4} onAdd={onAdd} />
-  }
-
   const [finishBuy, setFinishBuy] = useState(false);
-
+  // Cuando se ejecuta el evento onClick en el archivo ItemCount, se llama a onAdd, que setea finishBuy como true.
   const onAdd = () => setFinishBuy(true)
 
   const textAlt = details ? details.textAlt : "cargando";
@@ -91,6 +85,7 @@ const ItemDetails = ({ details }) => {
         </div>
       </div>
       <div className="model__btn__center grid__btn">
+        {/*SINCRONIZAR COUNTER - si finishBuy es true genera el componente Link, si es false genera el componente ItemCount */}
         {finishBuy
           ? <Link to='/cart' className="btn">Finalizar Compra</Link>
           : <ItemCount initialStock={0} stock={4} onAdd={onAdd} />}
