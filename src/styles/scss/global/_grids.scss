@@ -1,0 +1,317 @@
+.destacados__index {
+  display: grid;
+  grid-template-areas:
+    "product__tittle"
+    "grid__one"
+    "grid__two"
+    "grid__three"
+    "grid__four"
+    "grid__five"
+    "grid__six"
+    "grid__seven"
+    "grid__eight"
+  ;
+}
+
+.categories {
+  display: grid;
+  grid-template-areas:
+    "product__tittle"
+    "grid__one"
+    "grid__two"
+    "grid__three"
+    "grid__four"
+    "grid__five"
+    "grid__six"
+    "grid__seven"
+    "grid__eight"
+  ;
+}
+
+.model__grid {
+  padding: 0% 5% 0% 5%;
+  display: grid;
+  row-gap: 2%;
+  grid-template-areas:
+    "grid__one"
+    "grid__two"
+    "grid__three"
+    "grid__four"
+    "grid__btn"
+    "grid__five"
+}
+
+.product__tittle {
+  grid-area: product__tittle;
+}
+
+.grid__one {
+  grid-area: grid__one;
+}
+
+.grid__two {
+  grid-area: grid__two;
+}
+
+.grid__three {
+  grid-area: grid__three;
+}
+
+.grid__four {
+  grid-area: grid__four;
+}
+
+.grid__five {
+  grid-area: grid__five;
+}
+
+.grid__six {
+  grid-area: grid__six;
+}
+
+.grid__seven {
+  grid-area: grid__seven;
+}
+
+.grid__eight {
+  grid-area: grid__eight;
+}
+
+.grid__btn {
+  grid-area: grid__btn;
+}
+
+@media screen and (min-width: 700px) and (max-width:1023px) {
+  .destacados__index {
+    display: grid;
+    grid-template-areas:
+      "product__tittle product__tittle"
+      "grid__one grid__three"
+      "grid__two grid__four"
+      "grid__five grid__seven"
+      "grid__six grid__eight"
+    ;
+  }
+
+  .categories {
+    display: grid;
+    grid-template-areas:
+      "product__tittle product__tittle"
+      "grid__one grid__three"
+      "grid__two grid__four"
+      "grid__five grid__seven"
+      "grid__six grid__eight"
+      "grid__nine grid__eleven"
+      "grid__ten grid__twelve"
+      "grid__thirteen grid__fifteen"
+      "grid__fourteen grid__sixteen"
+    ;
+  }
+
+  .model__grid {
+    padding: 0% 5% 0% 5%;
+    display: grid;
+    row-gap: 2%;
+    grid-template-areas:
+      "grid__one"
+      "grid__two"
+      "grid__three"
+      "grid__four"
+      "grid__btn"
+      "grid__five"
+  }
+
+  .product__tittle {
+    grid-area: product__tittle;
+  }
+
+  .grid__one {
+    grid-area: grid__one;
+  }
+
+  .grid__two {
+    grid-area: grid__two;
+  }
+
+  .grid__three {
+    grid-area: grid__three;
+  }
+
+  .grid__four {
+    grid-area: grid__four;
+  }
+
+  .grid__five {
+    grid-area: grid__five;
+  }
+
+  .grid__six {
+    grid-area: grid__six;
+  }
+
+  .grid__seven {
+    grid-area: grid__seven;
+  }
+
+  .grid__eight {
+    grid-area: grid__eight;
+  }
+
+  .grid__nine {
+    grid-area: grid__nine;
+  }
+
+  .grid__ten {
+    grid-area: grid__ten;
+  }
+
+  .grid__eleven {
+    grid-area: grid__eleven;
+  }
+
+  .grid__twelve {
+    grid-area: grid__twelve;
+  }
+
+  .grid__thirteen {
+    grid-area: grid__thirteen;
+  }
+
+  .grid__fourteen {
+    grid-area: grid__fourteen;
+  }
+
+  .grid__fifteen {
+    grid-area: grid__fifteen;
+  }
+
+  .grid__sixteen {
+    grid-area: grid__sixteen;
+  }
+
+  .grid__btn {
+    grid-area: grid__btn;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  .destacados__index {
+    display: grid;
+    row-gap: 2%;
+    column-gap: 2%;
+    padding: 0 2% 0 2%;
+    grid-template-areas:
+      "product__tittle product__tittle product__tittle product__tittle"
+      "grid__one grid__three grid__five grid__seven"
+      "grid__two grid__four grid__six grid__eight"
+    ;
+  }
+
+  .categories {
+    display: grid;
+    row-gap: 2%;
+    column-gap: 2%;
+    padding: 0 2% 5% 2%;
+    grid-template-areas:
+      "filtro__desktop product__tittle product__tittle product__tittle product__tittle"
+      "filtro__desktop grid__one grid__three grid__five grid__seven"
+      "filtro__desktop grid__two grid__four grid__six grid__eight"
+      "filtro__desktop grid__nine grid__eleven grid__thirteen grid__fifteen"
+      "filtro__desktop grid__ten grid__twelve grid__fourteen grid__sixteen"
+    ;
+  }
+
+  .model__grid {
+    padding: 0% 5% 0% 5%;
+    display: grid;
+    row-gap: 2%;
+    grid-template-areas:
+      "grid__one grid__one grid__one grid__two"
+      "grid__one grid__one grid__one grid__three"
+      "grid__one grid__one grid__one grid__four"
+      "grid__one grid__one grid__one grid__btn"
+      "grid__one grid__one grid__one grid__space"
+      "grid__five grid__five grid__five grid__five"
+  }
+
+  .filtro__desktop {
+    grid-area: filtro__desktop;
+  }
+
+  .product__tittle {
+    grid-area: product__tittle;
+  }
+
+  .grid__one {
+    grid-area: grid__one;
+  }
+
+  .grid__two {
+    grid-area: grid__two;
+  }
+
+  .grid__three {
+    grid-area: grid__three;
+  }
+
+  .grid__four {
+    grid-area: grid__four;
+  }
+
+  .grid__five {
+    grid-area: grid__five;
+  }
+
+  .grid__six {
+    grid-area: grid__six;
+  }
+
+  .grid__seven {
+    grid-area: grid__seven;
+  }
+
+  .grid__eight {
+    grid-area: grid__eight;
+  }
+
+  .grid__nine {
+    grid-area: grid__nine;
+  }
+
+  .grid__ten {
+    grid-area: grid__ten;
+  }
+
+  .grid__eleven {
+    grid-area: grid__eleven;
+  }
+
+  .grid__twelve {
+    grid-area: grid__twelve;
+  }
+
+  .grid__thirteen {
+    grid-area: grid__thirteen;
+  }
+
+  .grid__fourteen {
+    grid-area: grid__fourteen;
+  }
+
+  .grid__fifteen {
+    grid-area: grid__fifteen;
+  }
+
+  .grid__sixteen {
+    grid-area: grid__sixteen;
+  }
+
+  .grid_space {
+    grid-area: grid_space;
+  }
+
+  .grid__btn {
+    grid-area: grid__btn;
+  }
+}

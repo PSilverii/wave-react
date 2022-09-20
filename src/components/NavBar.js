@@ -1,5 +1,5 @@
 //fotos
-import logoXs from "../assets/logo/logo-xs.png";
+import logoXs from "../assets/img/logo/logo-xs.png";
 //cart
 import CartWidgetMobileTablet from "./CartWidgetMobileTablet";
 import CartWidgetDesktop from "./CartWidgetDesktop";

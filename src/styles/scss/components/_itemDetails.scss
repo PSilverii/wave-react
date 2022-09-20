@@ -1,0 +1,602 @@
+@supports (object-fit: cover) {
+  .slide__item img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+.model__slide {
+  position: relative;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  margin-top: 120px;
+  width: 100%;
+  height: 70vh;
+}
+
+.slide__inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slide__open:checked+.slide__item {
+  position: static;
+  opacity: 100;
+}
+
+.slide__item {
+  position: absolute;
+  opacity: 0;
+}
+
+.slide__control {
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  @include font-white;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+
+.slide__control.prev {
+  left: 2%;
+}
+
+.slide__control.next {
+  right: 2%;
+}
+
+.slide__control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transition: 0.2s;
+  color: #aaaaaa;
+}
+
+#slide__1:checked~.control__1,
+#slide__2:checked~.control__2,
+#slide__3:checked~.control__3,
+#slide__4:checked~.control__4 {
+  display: block;
+}
+
+.slide__indicador {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.slide__indicador li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slide__circulo {
+  color: #828282;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+
+.slide__circulo:hover {
+  color: #aaaaaa;
+  transition: 0.2s;
+}
+
+#slide__1:checked~.control__1~.slide__indicador li:nth-child(1) .slide__circulo,
+#slide__2:checked~.control__2~.slide__indicador li:nth-child(2) .slide__circulo,
+#slide__3:checked~.control__3~.slide__indicador li:nth-child(3) .slide__circulo,
+#slide__4:checked~.control__4~.slide__indicador li:nth-child(4) .slide__circulo {
+  color: #ea00ff;
+}
+
+.model__grid {
+  padding-bottom: 100px;
+}
+
+.model__tittle {
+  @include font-black;
+  font-size: 20px;
+  margin-bottom: 1%;
+}
+
+.model__cuotas {
+  display: flex;
+}
+
+.model__icon {
+  font-family: $font-icon;
+  font-size: 20px;
+}
+
+.model__text {
+  @include font-black;
+  font-size: 16px;
+}
+
+.model__filtro {
+  @include flex-row-between;
+  margin: 0 10% 0 0%;
+}
+
+.variante__color {
+  width: 40px;
+  height: 20px;
+  border-radius: 10%;
+  background-color: $black;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.variante_talle {
+  margin-top: 5px;
+}
+
+.model__text--details {
+  @include font-black;
+  font-size: 14px;
+  text-decoration: underline;
+  text-align: right;
+}
+
+.btn__talle {
+  padding: 4px 6px 4px 6px;
+  margin-top: 50px;
+  background-color: $white;
+  border: 1px solid $black;
+  cursor: pointer;
+}
+
+.btn__talle:hover {
+  background-color: $black;
+  color: $white;
+  border: 1px solid $black;
+}
+
+.model__text--bold {
+  @include font-black;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.model__caracteristicas {
+  padding-bottom: 5%;
+}
+
+.model__btn {
+  @include btn;
+  padding: 15px 20px 15px 20px;
+}
+
+.model__btn:hover {
+  @include btn_hover;
+}
+
+@media screen and (min-width: 700px) and (max-width:1023px) {
+  @supports (object-fit: cover) {
+    .slide__item img {
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  .model__slide {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 120px;
+    width: 100%;
+    height: 70vh;
+  }
+
+  .slide__inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .slide__open:checked+.slide__item {
+    position: static;
+    opacity: 100;
+  }
+
+  .slide__item {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .slide__control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    @include font-white;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+  }
+
+  .slide__control.prev {
+    left: 2%;
+  }
+
+  .slide__control.next {
+    right: 2%;
+  }
+
+  .slide__control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transition: 0.2s;
+    color: #aaaaaa;
+  }
+
+  #slide__1:checked~.control__1,
+  #slide__2:checked~.control__2,
+  #slide__3:checked~.control__3,
+  #slide__4:checked~.control__4 {
+    display: block;
+  }
+
+  .slide__indicador {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+  }
+
+  .slide__indicador li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  .slide__circulo {
+    color: #828282;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+  }
+
+  .slide__circulo:hover {
+    color: #aaaaaa;
+    transition: 0.2s;
+  }
+
+  #slide__1:checked~.control__1~.slide__indicador li:nth-child(1) .slide__circulo,
+  #slide__2:checked~.control__2~.slide__indicador li:nth-child(2) .slide__circulo,
+  #slide__3:checked~.control__3~.slide__indicador li:nth-child(3) .slide__circulo,
+  #slide__4:checked~.control__4~.slide__indicador li:nth-child(4) .slide__circulo {
+    color: #ea00ff;
+  }
+
+  .model__grid {
+    padding-bottom: 100px;
+  }
+
+  .model__tittle {
+    @include font-black;
+    font-size: 20px;
+    margin-bottom: 1%;
+  }
+
+  .model__cuotas {
+    display: flex;
+  }
+
+  .model__icon {
+    font-family: $font-icon;
+    font-size: 20px;
+  }
+
+  .model__text {
+    @include font-black;
+    font-size: 16px;
+  }
+
+  .model__filtro {
+    @include flex-row-between;
+    margin: 0 10% 0 0%;
+  }
+
+  .variante__color {
+    width: 40px;
+    height: 20px;
+    border-radius: 10%;
+    background-color: $black;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+
+  .variante_talle {
+    margin-top: 5px;
+  }
+
+  .model__text--details {
+    @include font-black;
+    font-size: 14px;
+    text-decoration: underline;
+    text-align: right;
+  }
+
+  .btn__talle {
+    padding: 4px 6px 4px 6px;
+    margin-top: 50px;
+    background-color: $white;
+    border: 1px solid $black;
+    cursor: pointer;
+  }
+
+  .btn__talle:hover {
+    background-color: $black;
+    color: $white;
+    border: 1px solid $black;
+  }
+
+  .model__text--bold {
+    @include font-black;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .model__caracteristicas {
+    padding-bottom: 5%;
+  }
+
+  .model__btn {
+    @include btn;
+    padding: 15px 20px 15px 20px;
+  }
+
+  .model__btn:hover {
+    @include btn_hover;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  @supports (object-fit: cover) {
+    .slide__item img {
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  .slide {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 120px;
+    width: 50%;
+    height: 70vh;
+  }
+
+  .slide__inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  .slide__inner input {
+    display:none;
+  }
+
+  .slide__open:checked+.slide__item {
+    position: static;
+    opacity: 100;
+  }
+
+  .slide__item {
+    position: absolute;
+    opacity: 0;
+  }
+
+
+  .slide__control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    @include font-white;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+  }
+
+  .slide__control.prev {
+    left: 2%;
+  }
+
+  .slide__control.next {
+    right: 2%;
+  }
+
+  .slide__control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transition: 0.2s;
+    color: #aaaaaa;
+  }
+
+  #slide__1:checked~.control__1,
+  #slide__2:checked~.control__2,
+  #slide__3:checked~.control__3,
+  #slide__4:checked~.control__4 {
+    display: block;
+  }
+
+  .slide__indicador {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+  }
+
+  .slide__indicador li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  .slide__circulo {
+    color: #828282;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+  }
+
+  .slide__circulo:hover {
+    color: #aaaaaa;
+    transition: 0.2s;
+  }
+
+  #slide__1:checked~.control__1~.slide__indicador li:nth-child(1) .slide__circulo,
+  #slide__2:checked~.control__2~.slide__indicador li:nth-child(2) .slide__circulo,
+  #slide__3:checked~.control__3~.slide__indicador li:nth-child(3) .slide__circulo,
+  #slide__4:checked~.control__4~.slide__indicador li:nth-child(4) .slide__circulo {
+    color: #ea00ff;
+  }
+
+  .model__grid {
+    padding-bottom: 100px;
+    margin-top: 120px;
+  }
+
+  .model__slide {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 0%;
+    width: 100%;
+    height: 70vh;
+  }
+
+  .model__tittle {
+    @include font-black;
+    font-size: 20px;
+    margin: 0 0 1% 4%;
+  }
+
+  .model__cuotas {
+    display: flex;
+  }
+
+  .model__icon {
+    font-family: $font-icon;
+    font-size: 20px;
+    margin: 0 0 0 4%;
+  }
+
+  .model__text {
+    @include font-black;
+    font-size: 16px;
+  }
+
+  .model__filtro {
+    @include flex-row-between;
+    margin: 0 0% 0 4%;
+  }
+
+  .variante__color {
+    width: 40px;
+    height: 20px;
+    border-radius: 10%;
+    background-color: $black;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+
+  .variante_talle {
+    margin-top: 5px;
+  }
+
+  .model__text--details {
+    @include font-black;
+    font-size: 14px;
+    text-decoration: underline;
+    text-align: right;
+    margin: 0 0 0 4%;
+  }
+
+  .btn__talle {
+    padding: 4px 6px 4px 6px;
+    margin-top: 50px;
+    background-color: $white;
+    border: 1px solid $black;
+    cursor: pointer;
+  }
+
+  .btn__talle:hover {
+    background-color: $black;
+    color: $white;
+    border: 1px solid $black;
+  }
+
+  .model__text--bold {
+    @include font-black;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .model__caracteristicas {
+    padding-bottom: 0%;
+  }
+
+  .model__btn__center {
+    width: 80%;
+    padding-left: 4%;
+    max-height: 50px
+  }
+
+  .model__btn {
+    @include btn;
+    padding: 15px 20px 15px 20px;
+  }
+
+  .model__btn:hover {
+    @include btn_hover;
+  }
+
+  .grid__space {
+    min-height: 20vh;
+  }
+}

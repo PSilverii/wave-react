@@ -1,0 +1,126 @@
+.filtro__desktop {
+  display: none;
+}
+
+@media screen and (min-width: 700px) and (max-width:1023px) {
+  .filtro__desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px #00000080;
+    box-shadow: inset 0 0 6px #00000080;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #0000004d;
+    box-shadow: inset 0 0 6px #0000004d;
+    border-radius: 10px;
+  }
+
+  .filtro__desktop {
+    display: block;
+    position: sticky;
+    height: 80vh;
+    top: 90px;
+    overflow-y: scroll;
+    overflow-x: clip;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .filtro__desktop h3 {
+    @include font-sec-black;
+    font-size: 22px;
+    margin-top: 20px;
+  }
+
+  .filtro__desktop--container {
+    @include flex-col;
+    margin-bottom: 30px;
+  }
+
+  .filtro__type {
+    @include font-sec-black;
+    font-size: 20px;
+    margin: 24px 0 8px 0;
+  }
+
+  .filtro__checkbox {
+    @include flex-row;
+    flex-wrap: nowrap;
+    margin: 0 8px 8px 0;
+    cursor: pointer;
+  }
+
+  .checkbox__none {
+    display: none;
+  }
+
+  .filtro__checkbox__item {
+    @include flex-row;
+  }
+
+  .filtro__color {
+    min-width: 80px;
+    display: inline-block;
+    @include font-black;
+  }
+
+  .filtro__circulo {
+    @include circle-filter-color;
+  }
+
+  .circulo__background--negro {
+    background-color: #000000;
+  }
+
+  .circulo__background--violeta {
+    background-color: #8d448d;
+  }
+
+  .circulo__background--verde {
+    background-color: #146914;
+  }
+
+  .circulo__background--rojo {
+    background-color: #ff0000;
+  }
+
+  .circulo__background--amarillo {
+    background-color: #ffff00;
+  }
+
+  .circulo__background--marron {
+    background-color: #a52a2a;
+  }
+
+  .circulo__background--naranja {
+    background-color: #ffa500;
+  }
+
+  .circulo__background--azul {
+    background-color: #3030dd;
+  }
+
+  .circulo__background--gris {
+    background-color: #808080;
+  }
+
+  .circulo__background--blanco {
+    background-color: #f5f5f5;
+  }
+
+  .circulo__background--celeste {
+    background-color: #38dbdb;
+  }
+}

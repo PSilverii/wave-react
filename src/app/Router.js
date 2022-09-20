@@ -1,7 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./Layout";
-import ItemListContainer from "../components/ItemListContainer";
-import ItemDetailContainer from "../components/ItemDetailsContainer";
+import Home from "../views/Home";
+import ItemDetailContainer from "../containers/ItemDetailsContainer";
+import Categories from "../views/Categories";
+
 
 
 
@@ -11,8 +13,8 @@ const Router = () => {
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
-            <Route index element={<ItemListContainer />} />
-            <Route path="/category/:categoryId" element={<ItemListContainer />} />
+            <Route index element={<Home />} />
+            <Route path="/category/:categoryId" element={<Categories />} />
             <Route path="/details/:detailsId" element={<ItemDetailContainer />} />
           </Route>
         </Routes>
