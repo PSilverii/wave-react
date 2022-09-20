@@ -1,6 +1,18 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import ItemCount from "./ItemCount";
 
 
 const ItemDetails = ({ details }) => {
+  const finish = () => {
+    finishBuy
+      ? <Link to='/cart' className="btn">Finalizar Compra</Link>
+      : <ItemCount initialStock={0} stock={4} onAdd={onAdd} />
+  }
+
+  const [finishBuy, setFinishBuy] = useState(false);
+
+  const onAdd = () => setFinishBuy(true)
 
   const textAlt = details ? details.textAlt : "cargando";
 
@@ -79,7 +91,9 @@ const ItemDetails = ({ details }) => {
         </div>
       </div>
       <div className="model__btn__center grid__btn">
-        <input className="model__btn" type="submit" value="Agregar al Carrito" />
+        {finishBuy
+          ? <Link to='/cart' className="btn">Finalizar Compra</Link>
+          : <ItemCount initialStock={0} stock={4} onAdd={onAdd} />}
       </div>
       <div className="grid__space">
       </div>

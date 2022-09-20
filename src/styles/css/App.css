@@ -1362,7 +1362,7 @@ nav {
   align-items: center;
   padding: 0 10px;
   border: 1px solid rgba(0, 0, 0, 0.14);
-  width: 30vw; }
+  width: 100%; }
 
 .item__count--btn {
   text-decoration: none;
@@ -2038,7 +2038,7 @@ nav {
   .model__caracteristicas {
     padding-bottom: 0%; }
   .model__btn__center {
-    width: 80%;
+    width: 100%;
     padding-left: 4%;
     max-height: 50px; }
   .model__btn {

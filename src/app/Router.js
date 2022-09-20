@@ -3,6 +3,7 @@ import Layout from "./Layout";
 import Home from "../views/Home";
 import ItemDetailContainer from "../containers/ItemDetailsContainer";
 import Categories from "../views/Categories";
+import Cart from "../components/Cart";
 
 
 
@@ -16,6 +17,7 @@ const Router = () => {
             <Route index element={<Home />} />
             <Route path="/category/:categoryId" element={<Categories />} />
             <Route path="/details/:detailsId" element={<ItemDetailContainer />} />
+            <Route path="/cart" element={<Cart />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -20,11 +20,6 @@ const ItemListContainer = () => {
     }
   }, [categoryId])
 
-  //ItemCount
-  // const onAdd = (quantity) => {
-  //   console.log(`Compraste ${quantity}`)
-  // }
-
   return (<>
     <div className="product__tittle">
       <h1>{tittle ? tittle[0].toUpperCase() + tittle.substring(1) : 'Cargando Titulo'}</h1>
