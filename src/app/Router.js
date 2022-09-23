@@ -6,8 +6,6 @@ import Categories from "../views/Categories";
 import Cart from "../components/Cart";
 
 
-
-
 const Router = () => {
   return (
     <>
@@ -25,6 +23,5 @@ const Router = () => {
     </>
   )
 }
-
 
 export default Router;

@@ -1,12 +1,26 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
+import { useCartContext } from "../context/CartProvider";
 
 
 const ItemDetails = ({ details }) => {
-  const [finishBuy, setFinishBuy] = useState(false);
-  // Cuando se ejecuta el evento onClick en el archivo ItemCount, se llama a onAdd, que setea finishBuy como true.
-  const onAdd = () => setFinishBuy(true)
+  const [addToCart, setAddToCart] = useState(false);
+
+  const {addItem, removeItem, clearCart} = useCartContext();  //DESAFIO CONTEXT-Destructuring para traerme las funciones
+
+  const onAdd = (quantity) => {
+    setAddToCart(false);
+    addItem (details, quantity); //DESAFIO CONTEXT llamo la función le paso los datos.
+  }
+
+  const clear = () => {
+    clearCart(); //DESAFIO CONTEXT llamo la funcion
+  }
+
+  const remove = () => {
+    removeItem(details.id); //DESAFIO CONTEXT llamo la funcion y le paso el id.
+  }
 
   const textAlt = details ? details.textAlt : "cargando";
 
@@ -85,12 +99,12 @@ const ItemDetails = ({ details }) => {
         </div>
       </div>
       <div className="model__btn__center grid__btn">
-        {/*SINCRONIZAR COUNTER - si finishBuy es true genera el componente Link, si es false genera el componente ItemCount */}
-        {finishBuy
+        {addToCart
           ? <Link to='/cart' className="btn">Finalizar Compra</Link>
           : <ItemCount initialStock={0} stock={4} onAdd={onAdd} />}
-      </div>
-      <div className="grid__space">
+          {/*DESAFIO CONTEXT ejecuto funciones cuando se clickean los botones*/}
+          <button to='/cart' className="btn" onClick={remove}>Eliminar producto del carrito</button>
+          <button to='/cart' className="btn" onClick={clear}>Vaciar carrito</button>
       </div>
       <div className="model__caracteristicas grid__five">
         <p className="model__text">{details ? details.description : "cargando"}</p>

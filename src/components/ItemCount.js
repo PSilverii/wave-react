@@ -8,7 +8,6 @@ const ItemCount = ({ initialStock, stock, onAdd }) => {
     setCount(initialStock);
   }, [initialStock])
 
-  //SINCRONIZAR COUNTER - contador
   return (<>
     <div className="item__count--between">
       <button className="item__count--btn" disabled={count <= 1} onClick={() => setCount(count - 1)}> - </button>
@@ -16,7 +15,6 @@ const ItemCount = ({ initialStock, stock, onAdd }) => {
       <button className="item__count--btn" disabled={count >= stock} onClick={() => setCount(count + 1)}> + </button>
     </div>
     <button id="btn__cart" className="btn" disabled={stock <= 0 || count === 0} onClick={() => onAdd(count)}>Agregar al carrito</button>
-    <button className="btn"></button>
   </>
   )
 }
