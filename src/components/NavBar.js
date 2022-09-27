@@ -33,27 +33,6 @@ const NavBar = () => {
                         <li>
                             <NavLink to='/category/remeras'>Remeras</NavLink>
                         </li>
-                        <li>
-                            <NavLink to='/category/buzos'>Buzos</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/category/zapatillas'>Zapatillas</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/category/neoprene'>Neoprene</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/category/botasneoprene'>Botas Neoprene</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/category/lycras'>Lycras</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/category/fundas'>Fundas para tablas de Surf</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/contact'>Contactanos</NavLink>
-                        </li>
                     </ul>
                     <div className="nav__btn__mobile">
                         <label htmlFor="check__search__mobile">
@@ -86,24 +65,7 @@ const NavBar = () => {
                                 <li>
                                     <NavLink className="nav__desktop__menu--text" to='/category/remeras'>Remeras</NavLink>
                                 </li>
-                                <li>
-                                    <NavLink className="nav__desktop__menu--text" to='/category/buzos'>Buzos</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink className="nav__desktop__menu--text" to='/category/zapatillas'>Zapatillas</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink className="nav__desktop__menu--text" to='/category/neoprene'>Neoprene</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink className="nav__desktop__menu--text" to='/category/botasneoprene'>Botas Neoprene</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink className="nav__desktop__menu--text" to='/category/lycras'>Lycras</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink className="nav__desktop__menu--text" to='/category/fundas'>Fundas para tablas de Surf</NavLink>
-                                </li>
+                                
                             </ul>
                         </li>
                         <li className="nav__desktop__btn--align"><NavLink className="nav__desktop__btn--text" to='/contact'>Contactanos</NavLink></li>

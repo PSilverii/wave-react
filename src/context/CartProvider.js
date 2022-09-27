@@ -26,6 +26,8 @@ const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider value={{
+      cartState,
+      setCartState,
       clearCart,
       isInCart,
       removeItem,

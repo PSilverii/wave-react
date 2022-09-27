@@ -5,21 +5,13 @@ import { useCartContext } from "../context/CartProvider";
 
 
 const ItemDetails = ({ details }) => {
-  const [addToCart, setAddToCart] = useState(false);
+  const [showFinish, setShowFinish] = useState(false);
 
-  const {addItem, removeItem, clearCart} = useCartContext();  //DESAFIO CONTEXT-Destructuring para traerme las funciones
-
+  const { addItem } = useCartContext();  //DESAFIO CONTEXT-Destructuring para traerme las funciones
+  
   const onAdd = (quantity) => {
-    setAddToCart(false);
-    addItem (details, quantity); //DESAFIO CONTEXT llamo la función le paso los datos.
-  }
-
-  const clear = () => {
-    clearCart(); //DESAFIO CONTEXT llamo la funcion
-  }
-
-  const remove = () => {
-    removeItem(details.id); //DESAFIO CONTEXT llamo la funcion y le paso el id.
+    setShowFinish(true)
+    addItem(details, quantity); //DESAFIO CONTEXT llamo la función le paso los datos.
   }
 
   const textAlt = details ? details.textAlt : "cargando";
@@ -31,19 +23,35 @@ const ItemDetails = ({ details }) => {
           <input className="slide__open" type="radio" id="slide__1" name="slide" aria-hidden="true" hidden=""
             defaultChecked="checked" />
           <div className="slide__item">
-            <img src={details.image !== undefined ? details.image.firstView : ''} alt={textAlt} />
+            <img
+              src={details.image !== undefined
+                ? details.image.firstView
+                : ''}
+              alt={textAlt} />
           </div>
           <input className="slide__open" type="radio" id="slide__2" name="slide" aria-hidden="true" hidden="" />
           <div className="slide__item">
-            <img src={details.image !== undefined ? details.image.carrousel_2 : ''} alt={textAlt} />
+            <img
+              src={details.image !== undefined
+                ? details.image.carrousel_2
+                : ''}
+              alt={textAlt} />
           </div>
           <input className="slide__open" type="radio" id="slide__3" name="slide" aria-hidden="true" hidden="" />
           <div className="slide__item">
-            <img src={details.image !== undefined ? details.image.carrousel_3 : ''} alt={textAlt} />
+            <img
+              src={details.image !== undefined
+                ? details.image.carrousel_3
+                : ''}
+              alt={textAlt} />
           </div>
           <input className="slide__open" type="radio" id="slide__4" name="slide" aria-hidden="true" hidden="" />
           <div className="slide__item">
-            <img src={details.image !== undefined ? details.image.carrousel_4 : ''} alt={textAlt} />
+            <img
+              src={details.image !== undefined
+                ? details.image.carrousel_4
+                : ''}
+              alt={textAlt} />
           </div>
           <label htmlFor="slide__4" className="slide__control prev control__1">{'<'}</label>
           <label htmlFor="slide__2" className="slide__control next control__1">{'>'}</label>
@@ -71,14 +79,26 @@ const ItemDetails = ({ details }) => {
       </div>
       <div className="model__info grid__two">
         <div className="model__tittle">
-          <h1>{details ? details.tittle : "cargando"}</h1>
+          <h1>
+            {details
+              ? details.tittle
+              : "cargando"}
+          </h1>
         </div>
         <div className="model__tittle">
-          <p>{details ? details.price : "cargando"}</p>
+          <p>
+            {details
+              ? details.price
+              : "cargando"}
+          </p>
         </div>
         <div className="model__cuotas">
           <p className="model__icon">credit_card</p>
-          <p className="model__text">{details ? details.cuotas : "cargando"}</p>
+          <p className="model__text">
+            {details
+              ? details.cuotas
+              : "cargando"}
+          </p>
         </div>
       </div>
       <div className="grid__three">
@@ -99,20 +119,39 @@ const ItemDetails = ({ details }) => {
         </div>
       </div>
       <div className="model__btn__center grid__btn">
-        {addToCart
+        <ItemCount initialStock={0} stock={4} onAdd={onAdd} />
+        {showFinish
           ? <Link to='/cart' className="btn">Finalizar Compra</Link>
-          : <ItemCount initialStock={0} stock={4} onAdd={onAdd} />}
-          {/*DESAFIO CONTEXT ejecuto funciones cuando se clickean los botones*/}
-          <button to='/cart' className="btn" onClick={remove}>Eliminar producto del carrito</button>
-          <button to='/cart' className="btn" onClick={clear}>Vaciar carrito</button>
+          : ""
+        }
       </div>
       <div className="model__caracteristicas grid__five">
-        <p className="model__text">{details ? details.description : "cargando"}</p>
+        <p className="model__text">
+          {details
+            ? details.description
+            : "cargando"}
+        </p>
         <p className="model__text--bold">Características</p>
-        <p className="model__text">{details.specifications !== undefined ? details.specifications.tela : ''}</p>
-        <p className="model__text">{details.specifications !== undefined ? details.specifications.characteristicOne : "cargando"}</p>
-        <p className="model__text">{details.specifications !== undefined ? details.specifications.characteristicTwo : "cargando"}</p>
-        <p className="model__text">{details.specifications !== undefined ? details.specifications.characteristic : "cargando"}</p>
+        <p className="model__text">
+          {details.specifications !== undefined
+            ? details.specifications.tela
+            : 'cargando'}
+        </p>
+        <p className="model__text">
+          {details.specifications !== undefined
+            ? details.specifications.characteristicOne
+            : "cargando"}
+        </p>
+        <p className="model__text">
+          {details.specifications !== undefined
+            ? details.specifications.characteristicTwo
+            : "cargando"}
+        </p>
+        <p className="model__text">
+          {details.specifications !== undefined
+            ? details.specifications.characteristic
+            : "cargando"}
+        </p>
       </div>
     </section>
   )
