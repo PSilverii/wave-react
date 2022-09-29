@@ -15,7 +15,6 @@ const ItemDetails = ({ details }) => {
   }
 
   const textAlt = details ? details.textAlt : "cargando";
-
   return (
     <section className="model__grid">
       <div className="model__slide grid__one">
@@ -24,24 +23,24 @@ const ItemDetails = ({ details }) => {
             defaultChecked="checked" />
           <div className="slide__item">
             <img
-              src={details.image !== undefined
-                ? details.image.firstView
+              src={details.imageFirstView !== undefined
+                ? details.imageFirstView
                 : ''}
               alt={textAlt} />
           </div>
           <input className="slide__open" type="radio" id="slide__2" name="slide" aria-hidden="true" hidden="" />
           <div className="slide__item">
             <img
-              src={details.image !== undefined
-                ? details.image.carrousel_2
+              src={details.imagesCarrousel !== undefined
+                ? details.imagesCarrousel
                 : ''}
               alt={textAlt} />
           </div>
           <input className="slide__open" type="radio" id="slide__3" name="slide" aria-hidden="true" hidden="" />
           <div className="slide__item">
             <img
-              src={details.image !== undefined
-                ? details.image.carrousel_3
+              src={details.imagesCarrousel !== undefined
+                ? details.imagesCarrousel
                 : ''}
               alt={textAlt} />
           </div>

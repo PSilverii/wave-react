@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetails from "../components/ItemDetails";
-import getData from "../app/api/petitions";
+// import getData from "../app/api/petitions";
+import { getProducts } from "../app/api/firebaseApi";
 
 const ItemDetailsContainer = () => {
 
@@ -9,7 +10,7 @@ const ItemDetailsContainer = () => {
 
   const { detailsId } = useParams();
   useEffect(() => {
-    getData().then(res => setDetails(res.find(details => details.id === detailsId)));
+    getProducts().then(res => setDetails(res.find(details => details.id === detailsId)));
   }, [detailsId])
 
   return (<>

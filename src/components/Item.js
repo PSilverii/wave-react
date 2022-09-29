@@ -5,7 +5,7 @@ const Item = ({ products }) => {
     <>
       <Link to={`/details/${products.id}`}>
         <div className="product__img">
-          <img src={products.image.firstView} alt="" />
+          <img src={products.imageFirstView} alt={products.textAlt} />
         </div>
         <div className="product__text--p">
           <p>{products.tittle}</p>

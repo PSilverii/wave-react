@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../components/ItemList";
-import getData from "../app/api/petitions";
+import { getProducts } from "../app/api/firebaseApi";
 
 
 
@@ -12,11 +12,11 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     if (categoryId) {
-      getData().then(dataContent => setData(dataContent.filter(data => data.category === categoryId)));
+      getProducts().then(dataContent => setData(dataContent.filter(data => data.category === categoryId)));
       setTittle(categoryId);
     }
     else {
-      getData().then(dataContent => setData(dataContent));
+      getProducts().then(dataContent => setData(dataContent));
     }
   }, [categoryId])
 

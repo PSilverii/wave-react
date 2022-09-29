@@ -22,7 +22,7 @@ const CartProvider = ({ children }) => {
     
     setCartState([...newCart, {...item, quantity: quantity + newQuantity}]);//DESAFIO CONTEXT seteo cartState con NewCart. Agrego objeto item que quedo por fuera del filter y le pongo quantity como prop de objeto. A esa prop le sumo el valor de la const quantity, el cual extraigo en la primer lógica, y la newQuantity que viene como parametro de la función.
   }
-  console.log(cartState)
+
 
   return (
     <CartContext.Provider value={{

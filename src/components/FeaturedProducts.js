@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import getData from "../app/api/petitions";
+import { getProducts } from "../app/api/firebaseApi";
 
 const FeaturedProducts = () => {
   const [infoFeatured, setInfoFeatured] = useState();
   
   useEffect(() => {
-    getData().then(res => setInfoFeatured(res.filter(producto => producto.featured === true)))
+    getProducts().then(res => setInfoFeatured(res.filter(producto => producto.featured === true)))
     
   }, [])
 
@@ -19,7 +19,7 @@ const FeaturedProducts = () => {
         </div>
         <div className="product__img grid__one">
           <Link to={infoFeatured ? `/details/${infoFeatured[0].id}` : `#`}>
-            <img src={infoFeatured ? infoFeatured[0].image.firstView : "cargando"} alt={infoFeatured ? infoFeatured[0].image.textAlt : "cargando"} />
+            <img src={infoFeatured ? infoFeatured[0].imageFirstView : "cargando"} alt={infoFeatured ? infoFeatured[0].textAlt : "cargando"} />
           </Link>
         </div>
         <div className="product__text grid__two">
@@ -29,7 +29,7 @@ const FeaturedProducts = () => {
         </div>
         <div className="product__img grid__three">
           <Link to={infoFeatured ? `/details/${infoFeatured[1].id}` : `#`}>
-            <img src={infoFeatured ? infoFeatured[1].image.firstView : "cargando"} alt={infoFeatured ? infoFeatured[1].image.textAlt : "cargando"} />
+            <img src={infoFeatured ? infoFeatured[1].imageFirstView : "cargando"} alt={infoFeatured ? infoFeatured[1].textAlt : "cargando"} />
           </Link>
         </div>
         <div className="product__text grid__four">
@@ -39,7 +39,7 @@ const FeaturedProducts = () => {
         </div>
         <div className="product__img grid__five">
           <Link to={infoFeatured ? `/details/${infoFeatured[2].id}` : `#`}>
-            <img src={infoFeatured ? infoFeatured[2].image.firstView : "cargando"} alt={infoFeatured ? infoFeatured[2].image.textAlt : "cargando"} />
+            <img src={infoFeatured ? infoFeatured[2].imageFirstView : "cargando"} alt={infoFeatured ? infoFeatured[2].textAlt : "cargando"} />
           </Link>
         </div>
         <div className="product__text grid__six">
@@ -49,7 +49,7 @@ const FeaturedProducts = () => {
         </div>
         <div className="product__img grid__seven">
           <Link to={infoFeatured ? `/details/${infoFeatured[3].id}` : `#`}>
-            <img src={infoFeatured ? infoFeatured[3].image.firstView : "cargando"} alt={infoFeatured ? infoFeatured[3].image.textAlt : "cargando"} />
+            <img src={infoFeatured ? infoFeatured[3].imageFirstView : "cargando"} alt={infoFeatured ? infoFeatured[3].textAlt : "cargando"} />
           </Link>
         </div>
         <div className="product__text grid__eight">

@@ -9,7 +9,7 @@ const ItemCart = ({ products }) => {
   return (
     <>
       <div className="product__img">
-        <img src={products.image.firstView} alt="" />
+        <img src={products.imageFirstView} alt="" />
       </div>
       <div className="product__text--p">
         <p>{products.tittle}</p>
