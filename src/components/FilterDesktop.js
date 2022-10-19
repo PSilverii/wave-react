@@ -2,6 +2,7 @@
 const FilterDesktop = () => {
   return (
     <div className="filtro__desktop">
+      <h3>EN CONSTRUCCION</h3>
       <h3>Filtrar por</h3>
       <div className="filtro__desktop--container">
         <div className="filtro__type">Color</div>

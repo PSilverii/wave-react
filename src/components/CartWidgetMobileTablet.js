@@ -9,7 +9,7 @@ const CartWidgetMobileTablet = () => {
     <input type="checkbox" id="check__cart__mobile" />
     <ul className="nav__btn__cart__mobile">
       <li>
-        <p>Aún no tienes nada en tu carrito</p>
+        <p> EN CONSTRUCCION </p>
       </li>
     </ul>
   </>

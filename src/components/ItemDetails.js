@@ -7,11 +7,11 @@ import { useCartContext } from "../context/CartProvider";
 const ItemDetails = ({ details }) => {
   const [showFinish, setShowFinish] = useState(false);
 
-  const { addItem } = useCartContext();  //DESAFIO CONTEXT-Destructuring para traerme las funciones
-  
+  const { addItem } = useCartContext();
+
   const onAdd = (quantity) => {
     setShowFinish(true)
-    addItem(details, quantity); //DESAFIO CONTEXT llamo la función le paso los datos.
+    addItem(details, quantity);
   }
 
   const textAlt = details ? details.textAlt : "cargando";
@@ -32,7 +32,7 @@ const ItemDetails = ({ details }) => {
           <div className="slide__item">
             <img
               src={details.imagesCarrousel !== undefined
-                ? details.imagesCarrousel
+                ? details.imagesCarrousel[0]
                 : ''}
               alt={textAlt} />
           </div>
@@ -40,26 +40,16 @@ const ItemDetails = ({ details }) => {
           <div className="slide__item">
             <img
               src={details.imagesCarrousel !== undefined
-                ? details.imagesCarrousel
+                ? details.imagesCarrousel[1]
                 : ''}
               alt={textAlt} />
           </div>
-          <input className="slide__open" type="radio" id="slide__4" name="slide" aria-hidden="true" hidden="" />
-          <div className="slide__item">
-            <img
-              src={details.image !== undefined
-                ? details.image.carrousel_4
-                : ''}
-              alt={textAlt} />
-          </div>
-          <label htmlFor="slide__4" className="slide__control prev control__1">{'<'}</label>
+          <label htmlFor="slide__3" className="slide__control prev control__1">{'<'}</label>
           <label htmlFor="slide__2" className="slide__control next control__1">{'>'}</label>
           <label htmlFor="slide__1" className="slide__control prev control__2">{'<'}</label>
           <label htmlFor="slide__3" className="slide__control next control__2">{'>'}</label>
           <label htmlFor="slide__2" className="slide__control prev control__3">{'<'}</label>
-          <label htmlFor="slide__4" className="slide__control next control__3">{'>'}</label>
-          <label htmlFor="slide__3" className="slide__control prev control__4">{'<'}</label>
-          <label htmlFor="slide__1" className="slide__control next control__4">{'>'}</label>
+          <label htmlFor="slide__1" className="slide__control next control__3">{'>'}</label>
           <ol className="slide__indicador">
             <li>
               <label htmlFor="slide__1" className="slide__circulo">•</label>
@@ -69,9 +59,6 @@ const ItemDetails = ({ details }) => {
             </li>
             <li>
               <label htmlFor="slide__3" className="slide__circulo">•</label>
-            </li>
-            <li>
-              <label htmlFor="slide__4" className="slide__circulo">•</label>
             </li>
           </ol>
         </div>
@@ -132,24 +119,24 @@ const ItemDetails = ({ details }) => {
         </p>
         <p className="model__text--bold">Características</p>
         <p className="model__text">
-          {details.specifications !== undefined
-            ? details.specifications.tela
+          {details.fabric !== undefined
+            ? details.fabric
             : 'cargando'}
         </p>
         <p className="model__text">
-          {details.specifications !== undefined
-            ? details.specifications.characteristicOne
+          {details.characteristics !== undefined
+            ? details.characteristics[0]
             : "cargando"}
         </p>
         <p className="model__text">
-          {details.specifications !== undefined
-            ? details.specifications.characteristicTwo
-            : "cargando"}
+          {details.characteristics !== undefined
+            ? details.characteristics[1]
+            : ""}
         </p>
         <p className="model__text">
-          {details.specifications !== undefined
-            ? details.specifications.characteristic
-            : "cargando"}
+          {details.characteristics !== undefined
+            ? details.characteristics[2]
+            : ""}
         </p>
       </div>
     </section>

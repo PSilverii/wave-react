@@ -4,6 +4,7 @@ import Home from "../views/Home";
 import ItemDetailContainer from "../containers/ItemDetailsContainer";
 import Categories from "../views/Categories";
 import Cart from "../components/Cart";
+import OrderForm from "../components/OrderForm";
 
 
 const Router = () => {
@@ -15,8 +16,8 @@ const Router = () => {
             <Route index element={<Home />} />
             <Route path="/category/:categoryId" element={<Categories />} />
             <Route path="/details/:detailsId" element={<ItemDetailContainer />} />
-            {/*SINCRONIZAR COUNTER - agrego ruta /cart para el componente Cart */}
             <Route path="/cart" element={<Cart />} />
+            <Route path="/orderform" element={<OrderForm />} />
           </Route>
         </Routes>
       </BrowserRouter>

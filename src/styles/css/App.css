@@ -2063,3 +2063,115 @@ nav {
     opacity: 0.8; }
   .grid__space {
     min-height: 20vh; } }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px; }
+
+.page__tittle {
+  text-align: center;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Raleway";
+  color: #000000;
+  font-size: 30px;
+  margin-bottom: 5%; }
+
+.page__tittle h1 {
+  font-family: "Raleway";
+  color: #000000;
+  font-size: 30px; }
+
+.page__tittle h2 {
+  font-family: "Raleway";
+  color: #000000;
+  font-size: 30px; }
+
+.order__form {
+  display: flex;
+  flex-direction: column;
+  margin: 0% 15px 0 15px; }
+
+.page__subtittle {
+  font-family: "Raleway";
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  list-style: none;
+  font-size: 15px;
+  margin-bottom: 24px; }
+
+.form__group {
+  margin-bottom: 20px;
+  width: 100%; }
+
+.form__label {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  font-family: "Raleway";
+  color: #000000;
+  font-size: 12px; }
+
+.form__input {
+  display: block;
+  font-family: "Raleway";
+  color: #000000;
+  font-size: 14px;
+  padding: 12px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  appearance: none;
+  background-color: white; }
+
+.form__input:hover {
+  border: 1px solid black;
+  transition: 0.3s; }
+
+.btn {
+  display: block;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: none;
+  white-space: normal;
+  background-size: 200% 200%;
+  background-image: linear-gradient(to top, #040404 50%, transparent 50%);
+  color: #040404;
+  border-bottom: 2px solid #040404;
+  font-weight: bold;
+  transition: all 0.09s ease-in;
+  padding: 15px 20px 15px 20px;
+  margin: 0 auto 50px auto;
+  justify-content: center; }
+
+.btn:hover {
+  color: #FFFFFF;
+  background-image: linear-gradient(to top, #040404 51%, transparent 50%);
+  background-position: 0 100%;
+  outline: 0;
+  opacity: 0.8; }
+
+.text__center {
+  font-family: "Raleway";
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px; }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .order__form {
+    justify-content: center; }
+  .form__group {
+    width: 720px;
+    margin: 0 auto 20px auto; } }
+
+@media screen and (min-width: 1023px) {
+  .order__form {
+    justify-content: center; }
+  .form__group {
+    width: 960px;
+    margin: 0 auto 20px auto; } }
